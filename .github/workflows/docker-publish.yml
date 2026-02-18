@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Corretto da v6 a v4
+        uses: actions/checkout@v4
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -34,7 +34,7 @@ jobs:
         with:
           context: .
           push: true
-          # Assicurati che i tag siano tutti minuscoli
+          platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/idt-25-27/publish-docker-images-mehdibargachh/stackoverflown:main
             ghcr.io/idt-25-27/publish-docker-images-mehdibargachh/stackoverflown:${{ github.sha }}
