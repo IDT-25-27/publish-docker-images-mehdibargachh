@@ -38,3 +38,4 @@ jobs:
           tags: |
             ghcr.io/idt-25-27/publish-docker-images-mehdibargachh/stackoverflown:main
             ghcr.io/idt-25-27/publish-docker-images-mehdibargachh/stackoverflown:${{ github.sha }}
+            
